@@ -23,14 +23,14 @@ squidsRouter.post(
   "/",
   nextWrapper(async (req, res) => {
     const newSquid = req.body.params.formPayload
+    console.log(newSquid)
 
     newSquid.experiencePoints = parseInt(newSquid.experiencePoints)
     if (newSquid.specialPower === "none") {
       newSquid.specialPower = null
     }
 
-    const squid = await Squid.query().insertAndFetch({ newSquid })
-    // console.log(newSquid)
+    const squid = await Squid.query().insertAndFetch(newSquid).debug()
     return res.status(201).json({ squid })
   })
 )
