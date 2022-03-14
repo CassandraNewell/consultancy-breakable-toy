@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
 import { useSquidList } from "../hooks/useSquidList"
+import { SquidForm } from "./SquidForm"
 import { SquidTile } from "./SquidTile"
-
 import "../../style/index.pcss"
 
 export const SquidList = (props) => {
@@ -59,10 +59,10 @@ export const SquidList = (props) => {
       )
     })
   }
-
   return (
     <div className="page-body">
       <h2 className="index-header__text">Squid List</h2>
+      <SquidForm />
       {squidListQueryOutput}
       <div className="pagination-buttons">
         <button

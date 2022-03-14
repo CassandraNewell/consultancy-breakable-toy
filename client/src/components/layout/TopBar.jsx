@@ -22,11 +22,6 @@ export const TopBar = () => (
             All Squids
           </Link>
         </li>
-        <li>
-          <Link to="/squids/new" className="menu-link">
-            Add a Squid
-          </Link>
-        </li>
       </ul>
     </div>
   </div>

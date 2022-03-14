@@ -1,3 +1,16 @@
-.submit-button {
-  @apply text-cyan-600 cursor-pointer hover:text-cyan-500 transition duration-200;
+input.form__submit-button {
+  @apply p-2 my-4 rounded-md bg-cyan-600 text-zinc-200 cursor-pointer hover:bg-cyan-500 hover:text-zinc-100 transition duration-200;
+}
+
+input.form__input-field,
+select.form__select-field {
+  @apply w-1/2 my-2 rounded-md;
+}
+
+.form__header {
+  @apply text-3xl font-medium mt-10 mb-5;
+}
+
+.hide-form {
+  @apply hidden;
 }
